@@ -75,11 +75,11 @@ func (p *Plunk) sendTransactionalEmails(payload []TransactionalEmailPayload) ([]
 			return nil, ErrMissingTo
 		}
 
-		if pl.Subject == "" {
+		if pl.Subject == "" && pl.Template == "" {
 			return nil, ErrMissingSubject
 		}
 
-		if pl.Body == "" {
+		if pl.Body == "" && pl.Template == "" {
 			return nil, ErrMissingBody
 		}
 	}
