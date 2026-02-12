@@ -8,11 +8,13 @@ import (
 )
 
 type TransactionalEmailPayload struct {
-	To      string `json:"to"`
-	Subject string `json:"subject"`
-	Body    string `json:"body"`
-	From    string `json:"from,omitempty"`
-	Name    string `json:"name,omitempty"`
+	To       string         `json:"to"`
+	Subject  string         `json:"subject"`
+	Body     string         `json:"body"`
+	From     string         `json:"from,omitempty"`
+	Name     string         `json:"name,omitempty"`
+	Template string         `json:"template,omitempty"`
+	Data     map[string]any `json:"data,omitempty"`
 }
 
 type ContactInfo struct {
@@ -26,9 +28,9 @@ type EmailRecipient struct {
 }
 
 type TransactionalEmailResponse struct {
-	Success bool             `json:"success"`
-	Emails  []EmailRecipient `json:"emails"`
-	Timestamp string         `json:"timestamp"`
+	Success   bool             `json:"success"`
+	Emails    []EmailRecipient `json:"emails"`
+	Timestamp string           `json:"timestamp"`
 }
 
 var (
