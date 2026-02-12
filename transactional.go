@@ -9,8 +9,8 @@ import (
 
 type TransactionalEmailPayload struct {
 	To       string         `json:"to"`
-	Subject  string         `json:"subject"`
-	Body     string         `json:"body"`
+	Subject  string         `json:"subject,omitempty"`
+	Body     string         `json:"body,omitempty"`
 	From     string         `json:"from,omitempty"`
 	Name     string         `json:"name,omitempty"`
 	Template string         `json:"template,omitempty"`
