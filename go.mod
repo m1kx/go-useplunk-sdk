@@ -1,4 +1,4 @@
-module github.com/kayode0x/plunk
+module github.com/m1kx/go-useplunk-sdk
 
 go 1.19
 
